@@ -35,11 +35,11 @@ jobs:
       run: mvn clean install -DskipTests core -am
 
     - name: Run Tests
-      run: mvn -pl core -Dtest=org.everit.json.schema.ObjectSchemaTest#toStringNoExplicitType
+      run: mvn -pl core -Dtest="org.everit.json.schema.ObjectSchemaTest#toStringNoExplicitType"
       
       
     - name: Run Tests with Nondex 
-      run: mvn -pl core test edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest==org.everit.json.schema.ObjectSchemaTest#toStringNoExplicitType
+      run: mvn -pl core test edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=="org.everit.json.schema.ObjectSchemaTest#toStringNoExplicitType"
      
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
